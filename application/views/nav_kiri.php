@@ -6,8 +6,13 @@
     </a>
   </li>
   <li >
-    <a href="#">
-      Barang
+    <a href="<?php echo site_url('barang/view') ?>">
+      Daftar Inventory
+    </a>
+  </li>
+  <li >
+    <a href="<?php echo site_url('barang/create') ?>">
+      Tambah Inventory
     </a>
   </li>
 </ul>

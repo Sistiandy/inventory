@@ -10,8 +10,7 @@ body {
     height: auto;
 }
 .col-tengah{
-    padding-top: 30px;
-    width: 60%;
+    width: 58%;
     height: auto;
     margin-right: auto;
     margin-left: auto;
@@ -70,4 +69,13 @@ padding-right: 5%;
 text-align: center;
 border-collapse: separate;
 border-radius: 15px;
+}
+.form-tambah{
+    padding: 30px;
+    border: 4px;
+    border-color: #CFCFCF;
+    border-style: solid;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
 }
