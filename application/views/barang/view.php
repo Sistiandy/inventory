@@ -24,8 +24,8 @@
                             <td id="nama"><?php echo $row->nama; ?></td>
                             <td id="spesifikasi"><?php echo $row->spesifikasi; ?></td>
                             <td id="harga"><?php echo $row->harga; ?></td>
-                            <td id="katagori"><?php echo $row->katagory; ?></td>
-                            <td id="action"> <a href="<?php echo site_url('pegawai/update/' . $row->id); ?>"><img src="<?php echo base_url(); ?>media/images/edit.png" /></a> | <a href="<?php echo site_url('pegawai/delete/' . $row->id); ?>" onclick="return confirm('Apakah Anda Yakin?');"><img src="<?php echo base_url(); ?>media/images/delete.png" /></a></td>
+                            <td id="katagori"><?php echo $row->kategori; ?></td>
+                            <td id="action"> <a href="<?php echo site_url('barang/update/' . $row->id); ?>"><img src="<?php echo base_url(); ?>media/images/edit-icon.png" /></a> | <a href="<?php echo site_url('barang/delete/' . $row->id); ?>" onclick="return confirm('Apakah Anda Yakin?');"><img src="<?php echo base_url(); ?>media/images/delete.png" /></a></td>
                         </tr>
                         <?php
                         $no++;

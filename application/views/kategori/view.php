@@ -12,14 +12,14 @@
                     <td class="controls" id="aksi" align="center">Aksi</td>
                 </tr>
                 <?php
-                if (!empty($view_barang)) {
+                if (!empty($view_kategori)) {
                     $no = 1;
-                    foreach ($view_barang as $row) {
+                    foreach ($view_kategori as $row) {
                         ?>
                         <tr class="isi">
                             <td id="no"><?php echo $no; ?></td>
                             <td id="nama"><?php echo $row->nama; ?></td>
-                            <td id="action"> <a href="<?php echo site_url('pegawai/update/'. $row->id); ?>"><img src="<?php echo base_url(); ?>media/images/edit.png" /></a> | <a href="<?php echo site_url('pegawai/delete/' . $row->id); ?>" onclick="return confirm('Apakah Anda Yakin?');"><img src="<?php echo base_url(); ?>media/images/delete.png" /></a></td>
+                            <td id="action"> <a href="<?php echo site_url('kategori/update/'. $row->id); ?>"><img src="<?php echo base_url(); ?>media/images/edit-icon.png" /></a> | <a href="<?php echo site_url('kategori/delete/' . $row->id); ?>" onclick="return confirm('Apakah Anda Yakin?');"><img src="<?php echo base_url(); ?>media/images/delete.png" /></a></td>
                         </tr>
                         <?php
                         $no++;

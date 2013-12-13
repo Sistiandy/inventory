@@ -1,7 +1,6 @@
 <h1>Tambah Kategori Barang</h1>
 <div class="form-tambah">
     <?php
-    $this->load->helper('form');
     echo form_open('kategori/create');
     ?>
     <p>Nama Kategori</p>

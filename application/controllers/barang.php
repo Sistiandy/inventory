@@ -12,25 +12,44 @@ class Barang extends CI_Controller {
     }
 
     public function index() {
-        $data['page'] = 'barang/index';
-        $data['isi'] = 'nav_kiri';
-        $this->load->view('layout', $data);
-    }
-
-    public function view() {
-        $data['page'] = 'barang/tampil';
-        $data['isi'] = 'nav_kiri';
+        $this->load->model('Barang_model');
+        $data['barang'] = "";
+        $data['view_barang'] = $this->Barang_model->get_all();
+        $data['page'] = 'barang/view';
         $this->load->view('layout', $data);
     }
 
     public function create() {
-        if ($this->input->post('submit')) {
-            $this->Barang_model->create_data();
-            redirect('pegawai');
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('nama', 'Nama Barang', 'required');
+        $this->form_validation->set_rules('spesifikasi', 'Spesifikasi', 'required');
+        $this->form_validation->set_rules('harga', 'Harga', 'required');
+        $this->form_validation->set_rules('kategori', 'Kategori', 'required');
+        $this->form_validation->set_error_delimiters('<div class="alert alert-danger">', '</div>');
+
+        if ($_POST AND $this->form_validation->run() == TRUE) {
+            $params['nama'] = $this->input->post('nama');
+            $params['spesifikasi'] = $this->input->post('spesifikasi');
+            $params['harga'] = $this->input->post('harga');
+            $params['kategori'] = $this->input->post('kategori');
+            $this->Barang_model->add($params);
+            redirect('kategori');
+        } else {
+            $data['page'] = 'barang/add';
+            $this->load->view('layout', $data);
         }
-        $data['page'] = 'barang/tambah';
-        $data['isi'] = 'nav_kiri';
+    }
+    
+    public function delete($id)
+    {
+        $this->Barang_model->delete($id);
+        redirect('barang');
+    }
+    
+    public function update($id)
+    {
+        $data['pegawai'] = $this->Barang_model->get_id($id);
+        $data['page'] = 'barang/edit';
         $this->load->view('layout', $data);
     }
-
 }
