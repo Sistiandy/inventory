@@ -4,8 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/opt/lampp/htdocs/inventory/application/views/layout.php</file>
-            <file>file:/opt/lampp/htdocs/inventory/application/views/index.php</file>
-            <file>file:/opt/lampp/htdocs/inventory/media/css/style.css</file>
+            <file>file:/opt/lampp/htdocs/inventory/application/controllers/kategori.php</file>
+            <file>file:/opt/lampp/htdocs/inventory/application/models/barang_model.php</file>
+            <file>file:/opt/lampp/htdocs/inventory/application/views/barang/tambah.php</file>
+            <file>file:/opt/lampp/htdocs/inventory/application/controllers/barang.php</file>
+            <file>file:/opt/lampp/htdocs/inventory/application/views/kategori/tampil.php</file>
         </group>
     </open-files>
 </project-private>

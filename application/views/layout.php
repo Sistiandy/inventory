@@ -23,16 +23,29 @@
     <body>
         <div class="container">
             <div class="header">
-                    <ul class="nav nav-pills pull-right">
-                        <li class="active"><a href="<?php echo site_url('home') ?>">Home</a></li>
-                        <li><a href="<?php echo site_url('barang') ?>">Barang</a></li>
-                        <li><a href="#">About</a></li>
-                    </ul>
-                    <h3 class="text-muted">App. Inventory</h3>
-                </div>
-                <hr>
+
+                <h3 class="text-muted">App. Inventory</h3>
+            </div>
+            <hr>
             <div class="col-kiri">
-                <?php isset($isi) ? $this->load->view($isi) : null; ?>
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active">
+                        <a href="<?php echo site_url('home') ?>">
+                            <span class="badge pull-right"></span>
+                            Home
+                        </a>
+                    </li>
+                    <li >
+                        <a href="<?php echo site_url('barang/view') ?>">
+                            Barang
+                        </a>
+                    </li>
+                    <li >
+                        <a href="<?php echo site_url('kategori/view') ?>">
+                            Kategori
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div class="col-tengah">
                 <?php isset($page) ? $this->load->view($page) : null; ?>
