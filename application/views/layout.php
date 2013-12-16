@@ -36,12 +36,12 @@
                         </a>
                     </li>
                     <li >
-                        <a href="<?php echo site_url('barang/index') ?>">
-                            Barang
+                        <a href="<?php echo site_url('product/index') ?>">
+                            Produk
                         </a>
                     </li>
                     <li >
-                        <a href="<?php echo site_url('kategori/index') ?>">
+                        <a href="<?php echo site_url('category/index') ?>">
                             Kategori
                         </a>
                     </li>

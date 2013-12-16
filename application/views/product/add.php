@@ -1,12 +1,11 @@
-<h1>Tambah Barang</h1>
+<h1>Tambah Produk</h1>
 <div class="form-tambah">
 
     <?php
     $this->load->helper('form');
-    echo form_open('barang/create');
+    echo form_open('product/create');
     ?>
-    <input type="hidden" name="id" value="<?php echo $pegawai['id'];?>"
-    <p>Nama Barang</p>
+    <p>Nama Produk</p>
     <?php echo form_error('nama'); ?>
     <input type="text" name="nama" class="form-control" placeholder="Text input"><br>       
     <p>Spesifikasi</p>
@@ -22,9 +21,10 @@
         <option>3</option>
         <option>4</option>
         <option>5</option>
+        <option>6</option>
     </select><br>
     <input type="submit" value="Tambah" class="btn btn-primary">
-    <a href='<?= site_url('barang'); ?>'><input type="button" value="Cancel" class="btn btn-default"></a>
+    <a href='<?= site_url('product'); ?>'><input type="button" value="Cancel" class="btn btn-default"></a>
     <button type="Reset" class="btn btn-default">Reset</button>
     <?php
     form_close();

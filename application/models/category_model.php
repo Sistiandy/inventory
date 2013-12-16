@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Kategori_model extends CI_Model {
+class Category_model extends CI_Model {
 
     public function __construct() {
         parent::__construct();
@@ -19,6 +19,12 @@ class Kategori_model extends CI_Model {
 
         $status = $this->db->affected_rows();
         return ($status == 0) ? FALSE : $id;
+    }
+
+    function update($id, $params) {
+
+        $this->db->where('id', $id);
+        $this->db->update('kategori', $params);
     }
 
     public function delete($id) {
@@ -38,10 +44,11 @@ class Kategori_model extends CI_Model {
         }
     }
 
-    public function get_id() {
+    public function get_id($id) {
         $this->db->select('id, nama');
         $this->db->where('id', $id);
-        return $this->db->get('kategori');
+        $res = $this->db->get('kategori');
+        return $res->row_array();
     }
 
 }

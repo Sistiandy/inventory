@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://192.168.1.102/inventory/';
+$config['base_url']	= 'http://192.168.1.103/inventory/';
 
 /*
 |--------------------------------------------------------------------------

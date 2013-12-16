@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Barang_model extends CI_Model {
+class Product_model extends CI_Model {
 
     public function __construct() {
         parent::__construct();
@@ -19,10 +19,10 @@ class Barang_model extends CI_Model {
         $this->db->insert('barang', $param);
     }
 
-    function update($id, $barang) {
+    function update($id, $params) {
 
         $this->db->where('id', $id);
-        $this->db->update('barang', $barang);
+        $this->db->update('barang', $params);
     }
 
     function delete($id) {
@@ -46,7 +46,7 @@ class Barang_model extends CI_Model {
     }
 
     function get_id($id) {
-        $this->db->select('id, nama,spesifikasi,harga,kategori');
+        $this->db->select('id, nama, spesifikasi, harga, kategori');
         $this->db->where('id', $id);
         $res = $this->db->get('barang');
         return $res->row_array();

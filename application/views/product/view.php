@@ -1,8 +1,8 @@
 <body>
-    <h1>Daftar Inventory</h1>
+    <h1>Daftar Produk</h1>
     <div>
         <div class="tombol-tambah">
-            <a href='<?= site_url('barang/create'); ?>'><img src="<?php echo base_url() ?>/media/images/add.png "></a>
+            <a href='<?= site_url('product/create'); ?>'><img src="<?php echo base_url() ?>/media/images/add.png "></a>
         </div>
         <div id="table">
             <table class="table table-bordered" align="center">
@@ -15,9 +15,9 @@
                     <td class="controls" id="aksi" align="center">Aksi</td>
                 </tr>
                 <?php
-                if (!empty($view_barang)) {
+                if (!empty($view_product)) {
                     $no = 1;
-                    foreach ($view_barang as $row) {
+                    foreach ($view_product as $row) {
                         ?>
                         <tr class="isi">
                             <td id="no"><?php echo $no; ?></td>
@@ -25,7 +25,7 @@
                             <td id="spesifikasi"><?php echo $row->spesifikasi; ?></td>
                             <td id="harga"><?php echo $row->harga; ?></td>
                             <td id="katagori"><?php echo $row->kategori; ?></td>
-                            <td id="action"> <a href="<?php echo site_url('barang/update/' . $row->id); ?>"><img src="<?php echo base_url(); ?>media/images/edit-icon.png" /></a> | <a href="<?php echo site_url('barang/delete/' . $row->id); ?>" onclick="return confirm('Apakah Anda Yakin?');"><img src="<?php echo base_url(); ?>media/images/delete.png" /></a></td>
+                            <td id="action"> <a href="<?php echo site_url('product/update/' . $row->id); ?>"><img src="<?php echo base_url(); ?>media/images/edit-icon.png" /></a> | <a href="<?php echo site_url('product/delete/' . $row->id); ?>" onclick="return confirm('Apakah Anda Yakin?');"><img src="<?php echo base_url(); ?>media/images/delete.png" /></a></td>
                         </tr>
                         <?php
                         $no++;

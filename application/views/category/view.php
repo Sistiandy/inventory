@@ -2,7 +2,7 @@
     <h1>Daftar Kategori</h1>
     <div>
         <div class="tombol-tambah">
-            <a href='<?= site_url('kategori/create'); ?>'><img src="<?php echo base_url() ?>/media/images/add.png "></a>
+            <a href='<?= site_url('category/create'); ?>'><img src="<?php echo base_url() ?>/media/images/add.png "></a>
         </div>
         <div id="table">
             <table class="table table-bordered" align="center">
@@ -12,14 +12,14 @@
                     <td class="controls" id="aksi" align="center">Aksi</td>
                 </tr>
                 <?php
-                if (!empty($view_kategori)) {
+                if (!empty($view_category)) {
                     $no = 1;
-                    foreach ($view_kategori as $row) {
+                    foreach ($view_category as $row) {
                         ?>
                         <tr class="isi">
                             <td id="no"><?php echo $no; ?></td>
                             <td id="nama"><?php echo $row->nama; ?></td>
-                            <td id="action"> <a href="<?php echo site_url('kategori/update/'. $row->id); ?>"><img src="<?php echo base_url(); ?>media/images/edit-icon.png" /></a> | <a href="<?php echo site_url('kategori/delete/' . $row->id); ?>" onclick="return confirm('Apakah Anda Yakin?');"><img src="<?php echo base_url(); ?>media/images/delete.png" /></a></td>
+                            <td id="action"> <a href="<?php echo site_url('category/update/'. $row->id); ?>"><img src="<?php echo base_url(); ?>media/images/edit-icon.png" /></a> | <a href="<?php echo site_url('category/delete/' . $row->id); ?>" onclick="return confirm('Apakah Anda Yakin?');"><img src="<?php echo base_url(); ?>media/images/delete.png" /></a></td>
                         </tr>
                         <?php
                         $no++;
